@@ -4,3 +4,5 @@ zstash.egg-info/
 *.pyc
 *~
 \#*
+venv/
+.idea/
