@@ -36,4 +36,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          bash tests/test.sh
+          cd tests
+          python -m unittest
