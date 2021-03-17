@@ -9,7 +9,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "macos-latest"]
+    name: ${{ matrix.os }} Build
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         shell: bash -l {0}
