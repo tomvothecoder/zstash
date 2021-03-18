@@ -33,6 +33,7 @@ jobs:
           python -m unittest
 
   publish-docs:
+    if: github.event_name == 'push'
     needs: [build]
     runs-on: ubuntu-latest
     defaults:
